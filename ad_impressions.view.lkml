@@ -193,13 +193,13 @@ view: ad_impressions_adapter_base {
   dimension: conversions {
     hidden: yes
     type: number
-    sql: ${TABLE}.conversions ;;
+    sql: CAST(${TABLE}.conversions as NUMERIC) ;;
   }
 
   dimension: conversionvalue {
     hidden: yes
     type: number
-    sql: ${TABLE}.conversion_value ;;
+    sql: CAST(${TABLE}.conversion_value as NUMERIC) ;;
   }
 
   dimension: cost {
@@ -694,13 +694,13 @@ view: ad_impressions_ad_conversion_adapter {
   dimension: conversions {
     hidden: yes
     type: number
-    sql: ${TABLE}.conversions ;;
+    sql: CAST(${TABLE}.conversions as NUMERIC) ;;
   }
 
   dimension: conversionvalue {
     hidden: yes
     type: number
-    sql: ${TABLE}.conversion_value ;;
+    sql: CAST(${TABLE}.conversion_value as NUMERIC);;
   }
 
   dimension: device {
