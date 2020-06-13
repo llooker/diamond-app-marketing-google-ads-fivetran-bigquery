@@ -101,7 +101,7 @@ view: ad_impressions_derived_table {
       column: ad_network_type_1 { field: fact.ad_network_type1 }
       column: ad_network_type_2 { field: fact.ad_network_type2 }
       column: device { field: fact.device }
-      column: average_position {field: fact.weighted_average_position}
+#       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: conversion_value {field: fact.total_conversionvalue}
@@ -136,11 +136,11 @@ view: ad_impressions_adapter_base {
     sql: ${account_primary_key} ;;
   }
 
-  dimension: average_position {
-    hidden: yes
-    type: number
-    sql: ${TABLE}.average_position ;;
-  }
+#   dimension: average_position {
+#     hidden: yes
+#     type: number
+#     sql: ${TABLE}.average_position ;;
+#   }
 
   dimension: active_view_impressions {
     hidden: yes
@@ -279,7 +279,7 @@ view: ad_impressions_campaign_derived_table {
       column: ad_network_type_1 { field: fact.ad_network_type1 }
       column: ad_network_type_2 { field: fact.ad_network_type2 }
       column: device { field: fact.device }
-      column: average_position {field: fact.weighted_average_position}
+#       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: conversion_value {field: fact.total_conversionvalue}
@@ -365,7 +365,7 @@ view: ad_impressions_ad_group_derived_table {
       column: ad_network_type_1 { field: fact.ad_network_type1 }
       column: ad_network_type_2 { field: fact.ad_network_type2 }
       column: device { field: fact.device }
-      column: average_position {field: fact.weighted_average_position}
+#       column: average_position {field: fact.weighted_average_position}
       column: clicks {field: fact.total_clicks }
       column: conversions {field: fact.total_conversions}
       column: conversion_value {field: fact.total_conversionvalue}
