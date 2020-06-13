@@ -751,7 +751,7 @@ explore: ad_impressions_geo_adapter {
     from: geotargeting
     view_label: "US State"
     fields: [state]
-    sql_on: ${fact.region_criteria_id} = ${geo_us_state.criteria_id_string} AND
+    sql_on: CAST(${fact.region_criteria_id} as STRING) = ${geo_us_state.criteria_id_string} AND
       ${geo_us_state.is_us_state} ;;
     relationship: many_to_one
     type: inner
