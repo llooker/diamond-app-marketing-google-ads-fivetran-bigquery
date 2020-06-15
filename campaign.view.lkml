@@ -98,26 +98,26 @@ view: campaign_adapter {
   dimension: name {
     type: string
     sql: ${TABLE}.campaign_name ;;
-    link: {
-      label: "Campaign Dashboard"
-      url: "/dashboards/marketing_analytics::campaign_metrics_cost_per_conversion?Campaign={{ value | encode_uri }}"
-      icon_url: "http://www.looker.com/favicon.ico"
-    }
-    link: {
-      label: "View on AdWords"
-      icon_url: "https://www.google.com/s2/favicons?domain=www.adwords.google.com"
-      url: "https://adwords.google.com/aw/adgroups?campaignId={{ campaign_id._value | encode_uri }}"
-    }
-    link: {
-      label: "Pause Campaign"
-      icon_url: "https://www.google.com/s2/favicons?domain=www.adwords.google.com"
-      url: "https://adwords.google.com/aw/ads?campaignId={{ campaign_id._value | encode_uri }}"
-    }
-    link: {
-      url: "https://adwords.google.com/aw/ads?campaignId={{ campaign_id._value | encode_uri }}"
-      icon_url: "https://www.google.com/s2/favicons?domain=www.adwords.google.com"
-      label: "Change Budget"
-    }
+#     link: {
+#       label: "Campaign Dashboard"
+#       url: "/dashboards/marketing_analytics::campaign_metrics_cost_per_conversion?Campaign={{ value | encode_uri }}"
+#       icon_url: "http://www.looker.com/favicon.ico"
+#     }
+#     link: {
+#       label: "View on AdWords"
+#       icon_url: "https://www.google.com/s2/favicons?domain=www.adwords.google.com"
+#       url: "https://adwords.google.com/aw/adgroups?campaignId={{ campaign_id._value | encode_uri }}"
+#     }
+#     link: {
+#       label: "Pause Campaign"
+#       icon_url: "https://www.google.com/s2/favicons?domain=www.adwords.google.com"
+#       url: "https://adwords.google.com/aw/ads?campaignId={{ campaign_id._value | encode_uri }}"
+#     }
+#     link: {
+#       url: "https://adwords.google.com/aw/ads?campaignId={{ campaign_id._value | encode_uri }}"
+#       icon_url: "https://www.google.com/s2/favicons?domain=www.adwords.google.com"
+#       label: "Change Budget"
+#     }
     required_fields: [external_customer_id, campaign_id]
   }
 
